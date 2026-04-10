@@ -1,0 +1,16 @@
+name: Evaluación automática
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Mostrar mensaje
+        run: echo "La evaluación se ejecutó correctamente"
